@@ -5,6 +5,8 @@ import os
 apikey = os.getenv('apikey')
 token=f"token {apikey}"
 
+#remember to add the API keys
+
 req = requests.get("https://demo.vectra.io/api/v2.3/detections",headers={"Authorization":f"{apikey}")
 r=json.loads(req.content)
 
