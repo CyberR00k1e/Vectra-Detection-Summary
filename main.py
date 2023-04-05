@@ -7,7 +7,7 @@ token=f"token {apikey}"
 
 #remember to add the API keys
 
-req = requests.get("https://demo.vectra.io/api/v2.3/detections",headers={"Authorization":f"{apikey}")
+req = requests.get("https://demo.vectra.io/api/v2.3/detections",headers={"Authorization":f"token {apikey}"})
 r=json.loads(req.content)
 
 jsonpath_expression=parse('$..summary,detection_url,category,detection,src_host')
